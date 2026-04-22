@@ -1,8 +1,8 @@
--- Création de la base de données
+-- CrÃ©ation de la base de donnÃ©es
 CREATE DATABASE IF NOT EXISTS multiburo_calvin;
 USE multiburo_calvin;
 
--- Création des tables
+-- CrÃ©ation des tables
 CREATE TABLE TYPE_RESSOURCE (
     id_type INT,
     lib VARCHAR(30) NOT NULL,
@@ -74,9 +74,9 @@ INSERT INTO USER (id_user, nom, prenom) VALUES
 (6, 'Vu', 'Calvin');
 
 
--- Création de l'utilisateur système avec mot de passe
-CREATE USER 'calvin_vu'@'localhost' IDENTIFIED BY 'bonjoure';
+-- CrÃ©ation de l'utilisateur systÃ¨me avec mot de passe
+CREATE USER 'calvin_vu'@'localhost' IDENTIFIED BY ...MDP...;
 
--- Attribution des privilèges sur la base de données
+-- Attribution des privilÃ¨ges sur la base de donnÃ©es
 GRANT ALL PRIVILEGES ON multiburo_calvin.* TO 'calvin_vu'@'localhost';
 FLUSH PRIVILEGES;
