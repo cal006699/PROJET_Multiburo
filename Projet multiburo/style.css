@@ -1,0 +1,105 @@
+/* Thème Sombre Chic */
+/* Thème Sombre Chic - Version élargie */
+:root {
+    --bg-body: #121212;      
+    --bg-card: #1e1e1e;      
+    --text-main: #ffffff;    
+    --text-muted: #b0b0b0;   
+    --border-color: #404040; 
+    --accent-btn: #333333;   
+    --accent-hover: #505050; 
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.6;
+}
+
+/* Le conteneur est maintenant plus large (900px au lieu de 650px) */
+.container {
+    max-width: 900px; 
+    margin: 0 auto;
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 2px solid var(--border-color); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Plus d'espace entre les éléments */
+    padding: 30px;
+    background: #252525;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+}
+
+input[type="date"], 
+input[type="text"] {
+    padding: 14px;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    background: #121212;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* Bouton principal */
+input[type="submit"] {
+    background: var(--accent-btn);
+    color: #ffffff;
+    padding: 14px;
+    border: 2px solid #555555;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: var(--accent-hover);
+}
+
+/* Tableau Sombre */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+    border: 2px solid var(--border-color);
+}
+
+th {
+    background-color: #2a2a2a;
+    color: #ffffff;
+    text-align: left;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+}
+
+td {
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+}
+
+/* Bouton réserver dans le tableau */
+td input[type="submit"] {
+    background: #444444;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border: 1px solid #666;
+    width: 100%; /* Le bouton prend toute la largeur de la cellule */
+}
