@@ -22,9 +22,9 @@ Cette application desktop est dédiée aux administrateurs (chefs de projet) pou
 
 ## 🛠 Stack Technique
 
-* **Web (Client)** : PHP, HTML, CSS, JavaScript / Serveur Apache.
+* **Web (Client)** : PHP, HTML, CSS. / Serveur Apache.
 * **Gestion (Admin)** : C# (.NET).
-* **Base de Données** : SQL (MySQL/MariaDB).
+* **Base de Données** : SQL (MySQL).
 
 ## 🗄 Structure de la Base de Données
 
