@@ -1,0 +1,82 @@
+-- Création de la base de données
+CREATE DATABASE IF NOT EXISTS multiburo_calvin;
+USE multiburo_calvin;
+
+-- Création des tables
+CREATE TABLE TYPE_RESSOURCE (
+    id_type INT,
+    lib VARCHAR(30) NOT NULL,
+    CONSTRAINT pk_type_ressource PRIMARY KEY(id_type)
+);
+
+CREATE TABLE USER (
+    id_user INT,
+    nom VARCHAR(30),
+    prenom VARCHAR(30),
+    CONSTRAINT pk_user PRIMARY KEY(id_user)
+);
+
+CREATE TABLE RESSOURCE (
+    id_ressource INT,
+    lib VARCHAR(30),
+    nb_place INT,
+    id_type INT,
+    CONSTRAINT pk_ressource PRIMARY KEY(id_ressource),
+    CONSTRAINT fk_ressource FOREIGN KEY(id_type) REFERENCES TYPE_RESSOURCE(id_type)
+);
+
+CREATE TABLE RESERVATION (
+    id_ressource INT,
+    id_user INT,
+    date DATE,
+    CONSTRAINT pk_reservation PRIMARY KEY(id_ressource, id_user, date),
+    CONSTRAINT fk_reservation_R FOREIGN KEY(id_ressource) REFERENCES RESSOURCE(id_ressource),
+    CONSTRAINT fk_reservation_U FOREIGN KEY(id_user) REFERENCES USER(id_user)
+);
+
+-- Insertion des types de ressources [cite: 5]
+INSERT INTO TYPE_RESSOURCE (id_type, lib) VALUES
+(1, 'Bureau individuel'),
+(2, 'Bureau double'),
+(3, 'Bureau ouvert'),
+(4, 'Table open space');
+
+-- Insertion des ressources [cite: 6, 7]
+INSERT INTO RESSOURCE (id_ressource, lib, nb_place, id_type) VALUES
+(1, 'Bureau 1', 1, 1),
+(2, 'Bureau 2', 1, 1),
+(3, 'Bureau 3', 1, 1),
+(4, 'Bureau 4', 1, 1),
+(5, 'Bureau 5', 1, 1),
+(6, 'Bureau 6', 1, 1),
+(7, 'Bureau double 1', 2, 2),
+(8, 'Bureau double 2', 2, 2),
+(9, 'Bureau ouvert 1', 1, 3),
+(10, 'Bureau ouvert 2', 1, 3),
+(11, 'Bureau ouvert 3', 1, 3),
+(12, 'Bureau ouvert 4', 1, 3),
+(13, 'Bureau ouvert 5', 1, 3),
+(14, 'Table 1', 4, 4),
+(15, 'Table 2', 4, 4),
+(16, 'Table 3', 4, 4),
+(17, 'Table 4', 4, 4);
+
+-- Insertion des utilisateurs existants [cite: 12]
+INSERT INTO USER (id_user, nom, prenom) VALUES
+(1, 'Dupont', 'Noah'),
+(2, 'Martin', 'Bob'),
+(3, 'Bernard', 'Killian'),
+(4, 'Petit', 'Emeric'),
+(5, 'Leroy', 'Denis');
+
+-- Ajout de calvin_vu dans la table USER
+INSERT INTO USER (id_user, nom, prenom) VALUES
+(6, 'Vu', 'Calvin');
+
+
+-- Création de l'utilisateur système avec mot de passe
+CREATE USER 'calvin_vu'@'localhost' IDENTIFIED BY 'bonjoure';
+
+-- Attribution des privilèges sur la base de données
+GRANT ALL PRIVILEGES ON multiburo_calvin.* TO 'calvin_vu'@'localhost';
+FLUSH PRIVILEGES;
