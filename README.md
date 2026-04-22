@@ -29,10 +29,10 @@ Cette application desktop est dédiée aux administrateurs (chefs de projet) pou
 ## 🗄 Structure de la Base de Données
 
 Le système synchronise les données entre le Front et le Back via quatre entités principales :
-* **Users** : Gestion des comptes et droits d'accès.
-* **Desks** : Inventaire des bureaux et caractéristiques techniques.
-* **Reservations** : Historique et planning des occupations.
-* **Types** : Catégorisation des espaces (simple, duo, salle, etc.).
+* **user** : Gestion des comptes et droits d'accès.
+* **ressource** : Inventaire des bureaux et caractéristiques techniques.
+* **reservations** : Historique et planning des occupations.
+* **type_ressource** : Catégorisation des espaces (simple, duo, salle, etc.).
 
 ## 🚧 État d'avancement
 - [x] Interface de réservation web (PHP/Apache)
