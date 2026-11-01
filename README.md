@@ -27,8 +27,15 @@ Voici la description des principaux fichiers présents dans le dépôt :
 
 ## 🛠️ Pré-requis techniques
 
-* Un serveur local (ex: **XAMPP**, **WampServer**, ou **MAMP**) incluant **PHP** et **MySQL**.
+Le projet nécessite un serveur local (ex: **XAMPP**, **WampServer** ou **MAMP**) comprenant :
+* Un serveur web **Apache**
+* Un serveur de base de données **MySQL**
+* **PHP**
 
 ---
 
 ## ⚙️ Installation et Lancement
+
+1. **Cloner le projet** dans le dossier de votre serveur local (ex: `htdocs` pour XAMPP) :
+   ```bash
+   git clone [https://github.com/cal006699/PROJET_Multiburo.git](https://github.com/cal006699/PROJET_Multiburo.git)
