@@ -21,7 +21,6 @@ Voici la description des principaux fichiers présents dans le dépôt :
 * `model.inc.php` : Fichier contenant les requêtes et interactions avec la base de données.
 * `functionMultiburo.php` : Fonctions utilitaires et logique métier du projet.
 * `multi_calvin.php` : Page principale / interface utilisateur (connexion et affichage des ressources).
-* `multi_calvin_p2.php` : Page secondaire (gestion des réservations / validation).
 * `style.css` : Feuille de style personnalisée pour l'interface.
 
 ---
