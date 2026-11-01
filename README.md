@@ -36,6 +36,6 @@ Le projet nécessite un serveur local (ex: **XAMPP**, **WampServer** ou **MAMP**
 
 ## ⚙️ Installation et Lancement
 
-1. **Cloner le projet** dans le dossier de votre serveur local (ex: `htdocs` pour XAMPP) :
+1. **Cloner le projet** dans le dossier de votre serveur local :
    ```bash
    git clone [https://github.com/cal006699/PROJET_Multiburo.git](https://github.com/cal006699/PROJET_Multiburo.git)
